@@ -60,10 +60,8 @@ LETTER_SCORES = {
 
 
 def draw_letters():
-    # Create a copy of the letter pool dictionary
-    letter_pool = LETTER_POOL.copy()
 
-    # Draw 10 letters from the pool
+    letter_pool = LETTER_POOL.copy()
     letters = []
     for i in range(10):
         letter = random.choice(list(letter_pool.keys()))
@@ -72,13 +70,11 @@ def draw_letters():
         letters.append(letter)
         letter_pool[letter] -= 1
 
-    # Return the list of drawn letters
     return letters
 
 def uses_available_letters(word, letter_bank):
     
     letter_word_upper = word.upper()
-    # Create a copy of the letter pool dictionary
     letter_bank_copy = letter_bank.copy()
 
     for letter in letter_word_upper:
@@ -101,7 +97,6 @@ def score_word(word):
     
     return final_score
 
-words = ["MMMM", "WWW"]
 def get_highest_word_score(word_list):
     
     max_score = ('xaerfgtyujh',-1)
