@@ -46,7 +46,20 @@ def draw_letters():
     return letters
 
 def uses_available_letters(word, letter_bank):
-    pass
+    
+    letter_word_upper = word.upper()
+    # Create a copy of the letter pool dictionary
+    letter_bank_copy = letter_bank.copy()
+
+    for letter in letter_word_upper:
+        if letter in letter_bank_copy:
+            letter_bank_copy.remove(letter)
+    
+        else: 
+            return False
+        
+    return True 
+
 
 def score_word(word):
     pass
