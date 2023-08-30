@@ -1,5 +1,3 @@
-sh "echo $JAVA_HOME"
-
 node {
   stage('SCM') {
     checkout scm
