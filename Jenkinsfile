@@ -1,4 +1,3 @@
-source ~/.zshrc
 
 node {
   stage('SCM') {
