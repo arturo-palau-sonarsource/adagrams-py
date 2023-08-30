@@ -1,3 +1,5 @@
+source ~/.zshrc
+
 node {
   stage('SCM') {
     checkout scm
