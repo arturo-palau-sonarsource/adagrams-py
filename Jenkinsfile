@@ -3,9 +3,7 @@ node {
     checkout scm
   }
   stage('Which Java?') {
-            steps {
-                sh 'java --version'
-            }
+        sh 'java --version'
         }
   stage('SonarQube Analysis') {
     def scannerHome = tool 'SonarScanner';
