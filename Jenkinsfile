@@ -1,4 +1,7 @@
 node {
+  env.JAVA_HOME="${tool 'Java_17'}"
+  env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
+  sh 'java -version'
   stage('SCM') {
     checkout scm
   }
